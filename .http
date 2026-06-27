@@ -14,3 +14,12 @@ Content-Type: application/json
     "name": "adams",
     "description": "proper software developer"
 }
+
+### Update profile
+PUT {{baseUrl}}/profiles/1 
+Content-Type: application/json
+
+{
+    "name": "king",
+    "description": "badass"
+}
