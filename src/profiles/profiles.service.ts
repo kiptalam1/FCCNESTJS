@@ -25,4 +25,8 @@ export class ProfilesService {
   findAll() {
     return this.profiles;
   }
+
+  findOne(id: string) {
+    return this.profiles.find((p) => p.id === id);
+  }
 }
