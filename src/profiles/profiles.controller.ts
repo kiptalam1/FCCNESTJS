@@ -30,11 +30,7 @@ export class ProfilesController {
     @Param('id') id: string,
     @Body() updateProfileDto: UpdateProfileDto,
   ) {
-    return {
-      id: id,
-      name: updateProfileDto.name,
-      description: updateProfileDto.description,
-    };
+    return this.profilesService.update(id, updateProfileDto);
   }
 
   // DELETE /profiles/:id

@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { CreateProfileDto } from './dto/create-profile.dto';
+import { UpdateProfileDto } from './dto/update-profile.dto';
 
 @Injectable()
 export class ProfilesService {
@@ -36,5 +37,14 @@ export class ProfilesService {
       ...data,
     });
     return this.profiles.find((p) => p.name === data.name);
+  }
+  update(id: string, data: UpdateProfileDto) {
+    const match = this.profiles.find((p) => p.id === id);
+
+    if (!match) return {};
+    match.name = data.name;
+    match.description = data.description;
+
+    return match;
   }
 }
