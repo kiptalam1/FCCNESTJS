@@ -21,10 +21,7 @@ export class ProfilesController {
   // POST /profile
   @Post()
   create(@Body() createProfileDto: CreateProfileDto) {
-    return {
-      name: createProfileDto.name,
-      description: createProfileDto.description,
-    };
+    return this.profilesService.createOne(createProfileDto);
   }
 
   // PUT /profile/:id
