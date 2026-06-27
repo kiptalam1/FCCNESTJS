@@ -47,4 +47,10 @@ export class ProfilesService {
 
     return match;
   }
+  remove(id: string) {
+    const matchingIndex = this.profiles.findIndex((p) => p.id === id);
+    if (matchingIndex > -1) {
+      this.profiles.splice(matchingIndex, 1);
+    }
+  }
 }

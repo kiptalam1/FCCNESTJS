@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ### Update profile
-PUT {{baseUrl}}/profiles/1 
+PUT {{baseUrl}}/profiles/e8656342-0bbf-40c0-8734-90c886cc2d8e
 Content-Type: application/json
 
 {
@@ -25,4 +25,4 @@ Content-Type: application/json
 }
 
 ### Delete profile 
-DELETE {{baseUrl}}/profiles/1
+DELETE {{baseUrl}}/profiles/3e8c8bd9-b7f9-4f79-9658-a3455d3ba8f6
