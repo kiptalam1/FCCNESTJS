@@ -23,3 +23,6 @@ Content-Type: application/json
     "name": "king",
     "description": "badass"
 }
+
+### Delete profile 
+DELETE {{baseUrl}}/profiles/1
